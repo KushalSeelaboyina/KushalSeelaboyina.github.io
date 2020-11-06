@@ -1,43 +1,98 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Kushal Seelaboyina</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
 
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
 
-            <a class="navbar-brand" href="#">Logo</a>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
-          
-          </nav>
-          
-          <div class="container bg-dark text-white border">
-            <h1>About me</h1>
-            <p>Hey</p>
-          </div>
-          
-          <div class="container bg-dark text-white border">
-            <h1>Education</h1>
-            <p>B.E</p>
-          </div>
-          
-          <div class="container bg-primary text-white border">
-            <h1>Experience</h1>
-            <p>Partnership</p>
-          </div>          
-        </div>
-    </body>
+/* Style tab links */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.tablink {
+  background-color: #333;
+  color: white;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-size: 17px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: rgb(143, 139, 139);}
+#News {background-color: rgb(84, 87, 84);}
+#Contact {background-color: rgb(33, 33, 34);}
+#About {background-color: rgb(14, 13, 12);}
+</style>
+</head>
+<body>
+<div class="topnav">
+<button class="tablink" onclick="openPage('Home', this, 'black')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'black')" >News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'black')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'black')">About</button>
+</div>
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
 </html>
