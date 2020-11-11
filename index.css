@@ -1,0 +1,68 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+.tablink {
+  background-color: #333;
+  color: white;
+  float: left;
+  text-align: center; 
+  padding: 14px 16px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-size: 17px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  margin: 0%;
+}
+
+#Home {background-color:  #000;
+  background-image: url("beach.jpg");
+  /* Add the blur effect
+  filter: blur(8px);
+  -webkit-filter: blur(8px);*/
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Lets {background-color:  #000;}
+#Contact {background-color: #000;}
+#About {background-color:  #000;}
+
+.tabcontent p{
+  position: center; /* Position the background text */
+   /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}

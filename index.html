@@ -2,62 +2,17 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
-
-/* Style tab links */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.tablink {
-  background-color: #333;
-  color: white;
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  font-size: 17px;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Home {background-color: rgb(143, 139, 139);}
-#News {background-color: rgb(84, 87, 84);}
-#Contact {background-color: rgb(33, 33, 34);}
-#About {background-color: rgb(14, 13, 12);}
-</style>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 <div class="topnav">
 <button class="tablink" onclick="openPage('Home', this, 'black')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'black')" >News</button>
 <button class="tablink" onclick="openPage('Contact', this, 'black')">Contact</button>
 <button class="tablink" onclick="openPage('About', this, 'black')">About</button>
+<button class="tablink" onclick="openPage('Lets', this, 'black')" >News</button>
 </div>
 <div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
+  <p>Hi! I am just a small clog in our neverending timeline. On a serious note, I am a Web Development Enthuastic with a knack in Digital Media platforms. I am a Mumbai based Digital Media Consultant, currently working with TutorialsPoint where I work as a Partnership Specialist, connecting elearning content creators with a platform to host their courses. And am learning Web Development as a hobby.</p>
 </div>
 
 <div id="News" class="tabcontent">
